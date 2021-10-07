@@ -11,8 +11,11 @@
 		0B690F65270CB520008C360C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F64270CB520008C360C /* Account.swift */; };
 		0B690F6B270CB60D008C360C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F6A270CB60D008C360C /* User.swift */; };
 		0B690F6D270CCF29008C360C /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F6C270CCF29008C360C /* AccountModel.swift */; };
-		0B690F6F270CDBA4008C360C /* UserDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F6E270CDBA4008C360C /* UserDataBase.swift */; };
-		0B690F71270CDBB7008C360C /* AccountDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F70270CDBB7008C360C /* AccountDataBase.swift */; };
+		0B690F6F270CDBA4008C360C /* UserOperationsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F6E270CDBA4008C360C /* UserOperationsImplementation.swift */; };
+		0B690F71270CDBB7008C360C /* AccountOperationsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F70270CDBB7008C360C /* AccountOperationsImplementation.swift */; };
+		0B95C857270F4950003517CD /* AccountOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C856270F4950003517CD /* AccountOperations.swift */; };
+		0B95C859270F6878003517CD /* UserOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C858270F6878003517CD /* UserOperations.swift */; };
+		0B95C860270F9FFB003517CD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C85F270F9FFB003517CD /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,8 +36,11 @@
 		0B690F64270CB520008C360C /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		0B690F6A270CB60D008C360C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B690F6C270CCF29008C360C /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
-		0B690F6E270CDBA4008C360C /* UserDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataBase.swift; sourceTree = "<group>"; };
-		0B690F70270CDBB7008C360C /* AccountDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataBase.swift; sourceTree = "<group>"; };
+		0B690F6E270CDBA4008C360C /* UserOperationsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperationsImplementation.swift; sourceTree = "<group>"; };
+		0B690F70270CDBB7008C360C /* AccountOperationsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountOperationsImplementation.swift; sourceTree = "<group>"; };
+		0B95C856270F4950003517CD /* AccountOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountOperations.swift; sourceTree = "<group>"; };
+		0B95C858270F6878003517CD /* UserOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperations.swift; sourceTree = "<group>"; };
+		0B95C85F270F9FFB003517CD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 		0B690F5C270CA120008C360C /* Iti_Simulation */ = {
 			isa = PBXGroup;
 			children = (
+				0B95C85E270F9B20003517CD /* use.cases */,
 				0B690F69270CB5FB008C360C /* domain */,
 				0B690F66270CB5B2008C360C /* adapters */,
 				0B690F5D270CA120008C360C /* main.swift */,
@@ -77,10 +84,8 @@
 		0B690F66270CB5B2008C360C /* adapters */ = {
 			isa = PBXGroup;
 			children = (
-				0B690F6A270CB60D008C360C /* User.swift */,
-				0B690F6C270CCF29008C360C /* AccountModel.swift */,
-				0B690F6E270CDBA4008C360C /* UserDataBase.swift */,
-				0B690F70270CDBB7008C360C /* AccountDataBase.swift */,
+				0B95C85B270F9A7F003517CD /* console */,
+				0B95C85A270F9A6A003517CD /* database */,
 			);
 			path = adapters;
 			sourceTree = "<group>";
@@ -88,9 +93,53 @@
 		0B690F69270CB5FB008C360C /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				0B690F64270CB520008C360C /* Account.swift */,
+				0B95C85D270F9AC4003517CD /* account */,
+				0B95C85C270F9ABE003517CD /* user */,
 			);
 			path = domain;
+			sourceTree = "<group>";
+		};
+		0B95C85A270F9A6A003517CD /* database */ = {
+			isa = PBXGroup;
+			children = (
+				0B690F6E270CDBA4008C360C /* UserOperationsImplementation.swift */,
+				0B690F6C270CCF29008C360C /* AccountModel.swift */,
+				0B690F70270CDBB7008C360C /* AccountOperationsImplementation.swift */,
+				0B95C85F270F9FFB003517CD /* UserModel.swift */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		0B95C85B270F9A7F003517CD /* console */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = console;
+			sourceTree = "<group>";
+		};
+		0B95C85C270F9ABE003517CD /* user */ = {
+			isa = PBXGroup;
+			children = (
+				0B95C858270F6878003517CD /* UserOperations.swift */,
+				0B690F6A270CB60D008C360C /* User.swift */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+		0B95C85D270F9AC4003517CD /* account */ = {
+			isa = PBXGroup;
+			children = (
+				0B95C856270F4950003517CD /* AccountOperations.swift */,
+				0B690F64270CB520008C360C /* Account.swift */,
+			);
+			path = account;
+			sourceTree = "<group>";
+		};
+		0B95C85E270F9B20003517CD /* use.cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = use.cases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +201,12 @@
 			files = (
 				0B690F5E270CA120008C360C /* main.swift in Sources */,
 				0B690F6D270CCF29008C360C /* AccountModel.swift in Sources */,
-				0B690F71270CDBB7008C360C /* AccountDataBase.swift in Sources */,
+				0B95C859270F6878003517CD /* UserOperations.swift in Sources */,
+				0B690F71270CDBB7008C360C /* AccountOperationsImplementation.swift in Sources */,
 				0B690F65270CB520008C360C /* Account.swift in Sources */,
-				0B690F6F270CDBA4008C360C /* UserDataBase.swift in Sources */,
+				0B95C857270F4950003517CD /* AccountOperations.swift in Sources */,
+				0B690F6F270CDBA4008C360C /* UserOperationsImplementation.swift in Sources */,
+				0B95C860270F9FFB003517CD /* UserModel.swift in Sources */,
 				0B690F6B270CB60D008C360C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

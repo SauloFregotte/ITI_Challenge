@@ -7,14 +7,14 @@
 
 import Foundation
 
-//Entity
+//Entity / Model / Business
 class User{
     
     public static func builder() -> Builder{
         return Builder()
     }
     
-    private var id: Int = 0
+    var id: Int = -1
     
     private var username: String
     
@@ -22,11 +22,11 @@ class User{
     
     private var address: String
     
-    private var login: String
+    var login: String
     
-    private var password: String
+    var password: String
     
-    init(builder: Builder) {
+    init(_ builder: Builder) {
         self.username = builder.username
         self.documentNumber = builder.documentNumber
         self.address = builder.address
@@ -34,21 +34,23 @@ class User{
         self.password = builder.password
     }
     
-    public func registryUser() -> User{
-        
-        //TODO: saveUser DBInstance.save(self)
-        
-        return self
+    public func registryUser(_ userOperation: UserOperations) -> User{
+        return userOperation.save(self)
     }
     
-    public func verifyUserLogin(login: String, password: String) -> Bool{
+    public func verifyUserLogin(_ userOperation: UserOperations,
+                                login: String, password: String) -> Bool{
+        let user = userOperation.selectUserByLoginAndPassword(login, password)
         
-        //TODO: restrict flow
-        
+        if(user.count >= 0 && user.count < 2){
+            return true
+        }
         return false
     }
     
-    internal class Builder{
+    class Builder{
+        
+        fileprivate init() {}
         
         fileprivate var username: String = ""
         fileprivate var documentNumber: String = ""
@@ -56,33 +58,33 @@ class User{
         fileprivate var login: String = ""
         fileprivate var password: String = ""
         
-        public func called() -> Self{
+        public func called(_ username: String) -> Self{
             self.username = username
             return self
         }
         
-        public func withDocumentNumber() -> Self{
+        public func withDocumentNumber(_ documentNumber: String) -> Self{
             self.documentNumber = documentNumber
             return self
         }
         
-        public func livingAt() -> Self{
+        public func living(at address: String) -> Self{
             self.address = address
             return self
         }
         
-        public func withLogin() -> Self{
+        public func withLogin(_ login: String) -> Self{
             self.login = login
             return self
         }
         
-        public func withPassword() -> Self{
+        public func withPassword(_ password: String) -> Self{
             self.password = password
             return self
         }
         
         public func build() -> User{
-            return User(builder: self)
+            return User(self)
         }
     }
     

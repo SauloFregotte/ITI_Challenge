@@ -7,4 +7,10 @@
 
 import Foundation
 
+print("Ola mundo")
 
+let accountOp: AccountOperations = AccountOperationsImplementation()
+
+var account: Account = Account(Date.init(), 2.2, User.builder().build())
+
+account.consultInformation(accountOp)
