@@ -11,6 +11,8 @@ protocol UserOperations {
     
     func save(_ user: User) -> User
     
-    func selectUserByLoginAndPassword(_ login: String, _ password: String) -> [User]
+    func selectUserByLoginAndPassword(_ login: String, _ password: String) -> User
+    
+    func selectUser(_ id: Int) -> User
     
 }

@@ -11,14 +11,16 @@ protocol AccountOperations {
     
     func openAccount()
     
-    func closeAccount(_ user: User)
+    func closeAccount(_ account: Account)
     
-    func consultInformation()
+    func consultInformation(_ user: User)
     
-    func pixKeyRegistry()
+    func pixKeyRegistry(_ pixKey: String)
     
     func transference()
     
     func deposit()
+    
+    func findAccount(_ number: String, _ agency: String) -> Account
     
 }

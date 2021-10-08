@@ -12,20 +12,26 @@ class AccountModel{
     
     var id: Int = -1
     
-    private var dateOfOpening: Date
+    var accountNumber: String
     
-    private var balance: Double
+    var agency: String
+    
+    var balance: Double
+    
+    var pixKey: [String]
     
     var user: User
     
     init(account: Account) {
-        self.dateOfOpening = account.dateOfOpening
+        self.accountNumber = account.accountNumber
+        self.agency = account.agency
         self.balance = account.balance
+        self.pixKey = account.pixKey
         self.user = account.user
     }
-    
-    public func toAccount(){
-        
+
+    public func toAccount() ->Account{
+        return Account(accountNumber, agency, balance, pixKey, user)
     }
     
 }

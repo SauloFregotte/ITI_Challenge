@@ -7,20 +7,17 @@
 
 import Foundation
 
-//Entity / Model / Business
 class User{
     
     public static func builder() -> Builder{
         return Builder()
     }
     
-    var id: Int = -1
+    var username: String
     
-    private var username: String
+    var documentNumber: String
     
-    private var documentNumber: String
-    
-    private var address: String
+    var address: String
     
     var login: String
     
@@ -32,20 +29,6 @@ class User{
         self.address = builder.address
         self.login = builder.login
         self.password = builder.password
-    }
-    
-    public func registryUser(_ userOperation: UserOperations) -> User{
-        return userOperation.save(self)
-    }
-    
-    public func verifyUserLogin(_ userOperation: UserOperations,
-                                login: String, password: String) -> Bool{
-        let user = userOperation.selectUserByLoginAndPassword(login, password)
-        
-        if(user.count >= 0 && user.count < 2){
-            return true
-        }
-        return false
     }
     
     class Builder{
@@ -87,5 +70,4 @@ class User{
             return User(self)
         }
     }
-    
 }
