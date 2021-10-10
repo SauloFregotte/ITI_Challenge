@@ -17,16 +17,29 @@ class Deposit{
         self.userOperation = uOp
     }
     
-    public func deposit(_ accountRequestDto: AccountRequestDTO) -> Account{
+    public func deposit(_ accountRequest: AccountRequest) throws -> Account{
         
-        let account = accountRequestDto.selectAccount()
-        let user = account.
+        let account = accountRequest.selectAccount(accountOperation)
         
-        
-        if(){
-            
+        if(account == nil){
+            print("Account not found!")
+            throw RequestError.notFound
         }
         
-        return accountOperation.saveOperation(account)
+        if(!accountRequest.validAccount(account.unsafelyUnwrapped)){
+            print("Account not valid!")
+            throw RequestError.notFound
+        }
+        
+        let user = account?.user
+        
+        if(user == nil){
+            print("User not found!")
+            throw RequestError.notFound
+        }
+        
+        accountRequest.deposit(account.unsafelyUnwrapped)
+        
+        return accountOperation.saveOperation(account.unsafelyUnwrapped)
     }
 }

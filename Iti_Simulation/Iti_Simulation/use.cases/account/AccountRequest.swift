@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AccountRequestDTO{
+class AccountRequest{
     
     private let userId: Int
     
@@ -15,7 +15,7 @@ class AccountRequestDTO{
     
     private let agency: String
     
-    private let value: Double
+    let value: Double
     
     //Builder
     init(_ userId: Int, _ accountNumber: String, _ agency: String, _ value: Double) {
@@ -25,15 +25,15 @@ class AccountRequestDTO{
         self.value = value
     }
     
-    public func selectUser(_ userOperation: UserOperations) -> User?{
-        return userOperation.selectUser(userId)
-    }
-    
     public func selectAccount(_ accountOperation: AccountOperations)-> Account?{
         return accountOperation.findAccount(accountNumber, agency)
     }
     
-    public func validAccount(_ account: Account) ->Bool{
+    public func validAccount(_ account: Account) -> Bool{
         return account.isValidAccount(accountNumber, agency)
+    }
+    
+    public func deposit(_ account: Account){
+        return account.deposit(value)
     }
 }

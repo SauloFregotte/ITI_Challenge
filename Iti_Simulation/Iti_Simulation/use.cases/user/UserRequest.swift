@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LoginRequestDTO{
+class UserRequest{
     
     private let login: String
     
@@ -18,7 +18,7 @@ class LoginRequestDTO{
         self.password = password
     }
 
-    public func selectUserLoginAndPassword(_ userOperation: UserOperations) -> User?{
+    public func selectUser(_ userOperation: UserOperations) -> User?{
         return userOperation.selectUserByLoginAndPassword(login, password)
     }
 }

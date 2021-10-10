@@ -13,11 +13,16 @@
 		0B690F6D270CCF29008C360C /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F6C270CCF29008C360C /* AccountModel.swift */; };
 		0B690F6F270CDBA4008C360C /* UserOperationsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F6E270CDBA4008C360C /* UserOperationsImplementation.swift */; };
 		0B690F71270CDBB7008C360C /* AccountOperationsImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B690F70270CDBB7008C360C /* AccountOperationsImplementation.swift */; };
-		0B69B6C42710818800458C17 /* AccountRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6C32710818800458C17 /* AccountRequestDTO.swift */; };
+		0B69B6C42710818800458C17 /* AccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6C32710818800458C17 /* AccountRequest.swift */; };
 		0B69B6C62710916800458C17 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6C52710916800458C17 /* Deposit.swift */; };
 		0B69B6C8271094BB00458C17 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6C7271094BB00458C17 /* Login.swift */; };
-		0B69B6CA2710953200458C17 /* LoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6C92710953200458C17 /* LoginRequestDTO.swift */; };
+		0B69B6CA2710953200458C17 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6C92710953200458C17 /* UserRequest.swift */; };
 		0B69B6CD271099F300458C17 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6CC271099F300458C17 /* ErrorHandler.swift */; };
+		0B69B6D92711EED500458C17 /* ConsultInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6D82711EED500458C17 /* ConsultInformation.swift */; };
+		0B69B6DB2713763000458C17 /* OpenAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6DA2713763000458C17 /* OpenAccount.swift */; };
+		0B69B6DD2713763A00458C17 /* CloseAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6DC2713763A00458C17 /* CloseAccount.swift */; };
+		0B69B6DF2713767400458C17 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6DE2713767400458C17 /* Transfer.swift */; };
+		0B69B6E12713768100458C17 /* RegistryPixKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69B6E02713768100458C17 /* RegistryPixKey.swift */; };
 		0B95C857270F4950003517CD /* AccountOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C856270F4950003517CD /* AccountOperations.swift */; };
 		0B95C859270F6878003517CD /* UserOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C858270F6878003517CD /* UserOperations.swift */; };
 		0B95C860270F9FFB003517CD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C85F270F9FFB003517CD /* UserModel.swift */; };
@@ -43,11 +48,16 @@
 		0B690F6C270CCF29008C360C /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		0B690F6E270CDBA4008C360C /* UserOperationsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperationsImplementation.swift; sourceTree = "<group>"; };
 		0B690F70270CDBB7008C360C /* AccountOperationsImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountOperationsImplementation.swift; sourceTree = "<group>"; };
-		0B69B6C32710818800458C17 /* AccountRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRequestDTO.swift; sourceTree = "<group>"; };
+		0B69B6C32710818800458C17 /* AccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRequest.swift; sourceTree = "<group>"; };
 		0B69B6C52710916800458C17 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
 		0B69B6C7271094BB00458C17 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		0B69B6C92710953200458C17 /* LoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDTO.swift; sourceTree = "<group>"; };
+		0B69B6C92710953200458C17 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		0B69B6CC271099F300458C17 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		0B69B6D82711EED500458C17 /* ConsultInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultInformation.swift; sourceTree = "<group>"; };
+		0B69B6DA2713763000458C17 /* OpenAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAccount.swift; sourceTree = "<group>"; };
+		0B69B6DC2713763A00458C17 /* CloseAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseAccount.swift; sourceTree = "<group>"; };
+		0B69B6DE2713767400458C17 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		0B69B6E02713768100458C17 /* RegistryPixKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryPixKey.swift; sourceTree = "<group>"; };
 		0B95C856270F4950003517CD /* AccountOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountOperations.swift; sourceTree = "<group>"; };
 		0B95C858270F6878003517CD /* UserOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperations.swift; sourceTree = "<group>"; };
 		0B95C85F270F9FFB003517CD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -112,7 +122,7 @@
 		0B69B6CE27109D2200458C17 /* user */ = {
 			isa = PBXGroup;
 			children = (
-				0B69B6C92710953200458C17 /* LoginRequestDTO.swift */,
+				0B69B6C92710953200458C17 /* UserRequest.swift */,
 				0B69B6C7271094BB00458C17 /* Login.swift */,
 			);
 			path = user;
@@ -121,8 +131,13 @@
 		0B69B6CF27109DE300458C17 /* account */ = {
 			isa = PBXGroup;
 			children = (
+				0B69B6C32710818800458C17 /* AccountRequest.swift */,
+				0B69B6D82711EED500458C17 /* ConsultInformation.swift */,
+				0B69B6DC2713763A00458C17 /* CloseAccount.swift */,
 				0B69B6C52710916800458C17 /* Deposit.swift */,
-				0B69B6C32710818800458C17 /* AccountRequestDTO.swift */,
+				0B69B6DA2713763000458C17 /* OpenAccount.swift */,
+				0B69B6E02713768100458C17 /* RegistryPixKey.swift */,
+				0B69B6DE2713767400458C17 /* Transfer.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -236,14 +251,19 @@
 				0B690F6D270CCF29008C360C /* AccountModel.swift in Sources */,
 				0B69B6C8271094BB00458C17 /* Login.swift in Sources */,
 				0B95C859270F6878003517CD /* UserOperations.swift in Sources */,
-				0B69B6C42710818800458C17 /* AccountRequestDTO.swift in Sources */,
+				0B69B6C42710818800458C17 /* AccountRequest.swift in Sources */,
 				0B690F71270CDBB7008C360C /* AccountOperationsImplementation.swift in Sources */,
 				0B690F65270CB520008C360C /* Account.swift in Sources */,
-				0B69B6CA2710953200458C17 /* LoginRequestDTO.swift in Sources */,
+				0B69B6CA2710953200458C17 /* UserRequest.swift in Sources */,
 				0B95C857270F4950003517CD /* AccountOperations.swift in Sources */,
+				0B69B6DB2713763000458C17 /* OpenAccount.swift in Sources */,
+				0B69B6DD2713763A00458C17 /* CloseAccount.swift in Sources */,
+				0B69B6D92711EED500458C17 /* ConsultInformation.swift in Sources */,
 				0B690F6F270CDBA4008C360C /* UserOperationsImplementation.swift in Sources */,
 				0B95C860270F9FFB003517CD /* UserModel.swift in Sources */,
+				0B69B6DF2713767400458C17 /* Transfer.swift in Sources */,
 				0B690F6B270CB60D008C360C /* User.swift in Sources */,
+				0B69B6E12713768100458C17 /* RegistryPixKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

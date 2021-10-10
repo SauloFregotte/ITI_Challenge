@@ -15,9 +15,9 @@ class Login{
         self.userOperation = uOp
     }
     
-    public func logIn(_ loginRequest: LoginRequestDTO) throws -> User{
+    public func logIn(_ userRequest: UserRequest) throws -> User{
         
-        let userLogged = loginRequest.selectUserLoginAndPassword(userOperation)
+        let userLogged = userRequest.selectUser(userOperation)
         
         if(userLogged == nil){
             print("User not found!")
