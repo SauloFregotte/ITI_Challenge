@@ -29,6 +29,10 @@ class AccountModel{
         self.pixKey = account.pixKey
         self.user = account.user
     }
+    
+    public func saveNewBalance(_ balance: Double){
+        self.balance = balance
+    }
 
     public func toAccount() ->Account{
         return Account(accountNumber, agency, balance, pixKey, user)

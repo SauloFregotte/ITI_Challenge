@@ -38,15 +38,14 @@ class Account{
         }
     }
     
-    func closeAccount(_ accountOperation: AccountOperations){
-        switch balance {
-        case _ where balance > 0:
-            print("Please transfer the remaining money to another account.")
-        case _ where balance < 0:
-            print("The balance of your account is currently negative, please pay of your debt before closing it.")
-        default:
+    func closeAccount() -> Bool{
+        
+        if(balance == 0){
             print("Your acconut is beeing closed.")
-            accountOperation.closeAccount(self)
+            return true
+        }else{
+            print("Your account cannot be closed please tranfers the remaining money or pay your debt before closing it.")
+            return false
         }
     }
 

@@ -34,6 +34,6 @@ class AccountRequest{
     }
     
     public func deposit(_ account: Account){
-        return account.deposit(value)
+        account.deposit(value)
     }
 }

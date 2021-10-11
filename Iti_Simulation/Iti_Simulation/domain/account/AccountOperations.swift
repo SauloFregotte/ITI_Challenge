@@ -9,21 +9,17 @@ import Foundation
 
 protocol AccountOperations {
     
-    func deposit(_ value: Double)
-    
-    func findAccount(_ number: String, _ agency: String) -> Account
+    func findAccount(_ number: String, _ agency: String) -> Account?
     
     func saveOperation(_ account: Account) -> Account
     
-    
-    
-    func openAccount()
-    
     func closeAccount(_ account: Account)
     
-    func consultInformation(_ user: User)
-    
-    func pixKeyRegistry(_ pixKey: String)
-    
-    func transference()
+//    func openAccount()
+//
+//    func consultInformation(_ user: User)
+//
+//    func pixKeyRegistry(_ pixKey: String)
+//
+//    func transference()
 }
