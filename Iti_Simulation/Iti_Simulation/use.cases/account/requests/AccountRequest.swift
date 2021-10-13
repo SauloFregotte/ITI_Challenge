@@ -9,17 +9,13 @@ import Foundation
 
 class AccountRequest{
     
-    private let userId: Int
-    
     private let accountNumber: String
     
     private let agency: String
     
-    let value: Double
+    private let value: Double
     
-    //Builder
-    init(_ userId: Int, _ accountNumber: String, _ agency: String, _ value: Double) {
-        self.userId = userId
+    init(_ accountNumber: String, _ agency: String, _ value: Double) {
         self.accountNumber = accountNumber
         self.agency = agency
         self.value = value

@@ -9,13 +9,15 @@ import Foundation
 
 class OpenAccount{
     
-    private let userOperation: UserOperations
-
-    init(_ uOp: UserOperations) {
+    let accountOperation: AccountOperations
+    let userOperation: UserOperations
+    
+    init(_ aOp: AccountOperations, _ uOp: UserOperations) {
+        self.accountOperation = aOp
         self.userOperation = uOp
     }
     
-    public func openingAccount(_ userRequest: UserRequest){
+    public func openingAccount(_ accountRequest: AccountOpenTransferRequest) throws -> Account{
         
     }
     

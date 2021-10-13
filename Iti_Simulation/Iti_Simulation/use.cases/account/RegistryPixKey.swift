@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class RegistryPixKey{
+    
+    let accountOperation: AccountOperations
+    
+    init(_ aOp: AccountOperations){
+        self.accountOperation = aOp
+    }
+    
+    public func registry(_ accountRequest: AccountPixRequest) throws -> Account{
+        return 
+    }
+}

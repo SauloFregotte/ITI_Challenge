@@ -12,7 +12,7 @@ let options: [String : Account] = [:]
 let userOperations = UserOperationsImplementation()
 let accountOperations = AccountOperationsImplementation()
 let depositing = Deposit(accountOperations, userOperations)
-
+//Chamada de deposito
 printAccount(
     try depositing.deposit(
         accountRequest()
@@ -21,7 +21,6 @@ printAccount(
     
     func accountRequest() -> AccountRequest{
 
-        let userID = Int(readLine().unsafelyUnwrapped).unsafelyUnwrapped
         print("Entre a sua conta.")
         let accountNumber = readLine().unsafelyUnwrapped
         print("Entre a sua agencia.")
@@ -29,7 +28,7 @@ printAccount(
         print("Entre o valor da operacao.")
         let value = Double(readLine().unsafelyUnwrapped).unsafelyUnwrapped
         
-        return AccountRequest(userID, accountNumber, agency, value)
+        return AccountRequest(accountNumber, agency, value)
     }
     
     func userRequest() -> UserRequest{

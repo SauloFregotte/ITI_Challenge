@@ -17,8 +17,6 @@ protocol AccountOperations {
     
 //    func openAccount()
 //
-//    func consultInformation(_ user: User)
-//
 //    func pixKeyRegistry(_ pixKey: String)
 //
 //    func transference()

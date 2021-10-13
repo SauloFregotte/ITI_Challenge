@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class Transfer{
+    let accountOperation: AccountOperations
+    
+    init(_ aOp: AccountOperations){
+        self.accountOperation = aOp
+    }
+    
+    public func transfer(_ accountRequest: AccountOpenTransferRequest) throws -> Account{
+        
+    }
+}
