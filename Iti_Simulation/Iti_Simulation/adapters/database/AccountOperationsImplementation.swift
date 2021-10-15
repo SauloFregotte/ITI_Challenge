@@ -43,4 +43,28 @@ class AccountOperationsImplementation: AccountOperations{
             .filter({return $0.accountNumber == number && $0.agency == agency})
             .first.unsafelyUnwrapped
     }
+    
+    func findAccountByUser(_ user: User) -> Account? {
+        return listaAccountBD
+            .filter({return $0.user === user})
+            .first
+            .map{$0.toAccount()}
+    }
+    
+    func selectAccountById(_ id: Int) -> Account? {
+        return listaAccountBD
+            .filter({return $0.id == id})
+            .first
+            .map{$0.toAccount()}
+    }
+    
+    func openAccount(_ user: User) -> Account {
+        
+        let acNumber = String(Int.random(in: 0...99999))
+        let agNumber = String(Int.random(in: 0...9999))
+        let balance = 0.0
+        let pixKey: [String] = []
+        
+        return save(Account(acNumber, agNumber, balance, pixKey, user))
+    }
 }

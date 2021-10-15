@@ -11,15 +11,13 @@ protocol AccountOperations {
     
     func findAccount(_ number: String, _ agency: String) -> Account?
     
+    func findAccountByUser(_ user: User) ->Account?
+    
     func save(_ account: Account) -> Account
     
     func closeAccount(_ account: Account)
     
     func selectAccountById(_ id: Int) -> Account?
     
-//    func openAccount()
-//
-//    func pixKeyRegistry(_ pixKey: String) -> Account?
-//
-//    func transference()
+    func openAccount(_ user: User) -> Account
 }

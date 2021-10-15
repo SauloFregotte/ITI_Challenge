@@ -10,21 +10,21 @@ import Foundation
 class OpenAccount{
     
     let accountOperation: AccountOperations
-    let userOperation: UserOperations
     
-    init(_ aOp: AccountOperations, _ uOp: UserOperations) {
+    init(_ aOp: AccountOperations) {
         self.accountOperation = aOp
-        self.userOperation = uOp
     }
     
-    public func openingAccount(_ accountRequest: AccountTransferRequest) throws -> Account{
+    public func openingAccount(_ accountRequest: AccountOpenRequest) throws -> Account{
         
-        // see if there is an account already opened, bind the user to the account
+        let account = accountRequest.selectAccountBindToUser(accountOperation)
         
-        return accountOperation.
-        
+        if(account != nil){
+            print("The user already has an account!")
+            throw RequestError.alreadyExists
+        }
+        return accountRequest.createAccount(accountOperation)
     }
-    
 }
 
 

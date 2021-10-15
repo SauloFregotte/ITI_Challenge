@@ -28,7 +28,7 @@ class Deposit{
         
         if(!accountRequest.validAccount(account.unsafelyUnwrapped)){
             print("Account not valid!")
-            throw RequestError.notFound
+            throw RequestError.notValid
         }
         
         let user = account?.user

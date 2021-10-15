@@ -9,15 +9,17 @@ import Foundation
 
 class AccountOpenRequest{
     
-    private let accountNumber: String
-    
-    private let agency: String
-    
     private let user: User
     
-    init(_ acNumber: String, _ agency: String, _ user: User) {
-        self.accountNumber = acNumber
-        self.agency = agency
+    init(_ user: User) {
         self.user = user
+    }
+    
+    public func selectAccountBindToUser(_ accountOperation: AccountOperations)-> Account?{
+        return accountOperation.findAccountByUser(user)
+    }
+    
+    public func createAccount(_ accountOperation: AccountOperations) -> Account{
+        return accountOperation.openAccount(user)
     }
 }
