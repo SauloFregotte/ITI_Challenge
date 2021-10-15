@@ -16,6 +16,16 @@ class RegistryPixKey{
     }
     
     public func registry(_ accountRequest: AccountPixRequest) throws -> Account{
-        return 
+        
+        let account = accountRequest.selectAccountId(accountOperation)
+        
+        if(account == nil){
+            print("Account not found!")
+            throw RequestError.notFound
+        }
+        
+        accountRequest.registryKey(account.unsafelyUnwrapped)
+        
+        return accountOperation.save(account.unsafelyUnwrapped)
     }
 }

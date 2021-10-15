@@ -17,7 +17,11 @@ class OpenAccount{
         self.userOperation = uOp
     }
     
-    public func openingAccount(_ accountRequest: AccountOpenTransferRequest) throws -> Account{
+    public func openingAccount(_ accountRequest: AccountTransferRequest) throws -> Account{
+        
+        // see if there is an account already opened, bind the user to the account
+        
+        return accountOperation.
         
     }
     

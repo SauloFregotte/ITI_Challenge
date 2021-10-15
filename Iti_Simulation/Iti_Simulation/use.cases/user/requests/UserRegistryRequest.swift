@@ -27,4 +27,20 @@ class UserRegistryRequest{
         self.login = login
         self.password = password
     }
+    
+    public func selectUser(_ userOperation: UserOperations) -> User?{
+        return userOperation.selectUserByLoginAndPassword(login, password)
+    }
+    
+    public func registry(_ userOp: UserOperations) -> User{
+        userOp.save(
+            User.builder()
+                .called(username)
+                .withDocumentNumber(documentNumber)
+                .living(at: address)
+                .withLogin(login)
+                .withPassword(password)
+                .build()
+        )
+    }
 }

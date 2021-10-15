@@ -9,4 +9,6 @@ import Foundation
 
 enum RequestError: Error{
     case notFound
+    case alreadyExists
+    case notValid
 }

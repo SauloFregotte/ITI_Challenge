@@ -29,7 +29,7 @@ class AccountOperationsImplementation: AccountOperations{
         listaAccountBD.remove(at: accountModel.id)
     }
     
-    func saveOperation(_ account: Account) -> Account {
+    func save(_ account: Account) -> Account {
         let accountModel = find(account.accountNumber, account.agency)
         
         accountModel.saveNewBalance(account.balance)

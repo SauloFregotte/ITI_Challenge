@@ -8,7 +8,7 @@
 import Foundation
 
 
-class AccountOpenTransferRequest{
+class AccountTransferRequest{
     
     private let accountNumber: String
     
@@ -16,10 +16,14 @@ class AccountOpenTransferRequest{
     
     private let user: User
     
-    init(_ accountNumber: String, _ agency: String, _ user: User){
+    private let value: Double
+    
+    //Builder
+    init(_ accountNumber: String, _ agency: String, _ user: User, _ value: Double){
         self.accountNumber = accountNumber
         self.agency = agency
         self.user = user
+        self.value = value
     }
     
 }

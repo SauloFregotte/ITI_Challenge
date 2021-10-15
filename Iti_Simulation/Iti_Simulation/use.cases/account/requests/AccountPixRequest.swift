@@ -11,7 +11,18 @@ class AccountPixRequest{
     
     private let pixKeyEntry: String
     
-    init(_ pKe: String){
+    private let id: Int
+    
+    init(_ pKe: String, _ id: Int){
         self.pixKeyEntry = pKe
+        self.id = id
+    }
+    
+    public func selectAccountId(_ accountOperation: AccountOperations)-> Account?{
+        return accountOperation.selectAccountById(id)
+    }
+    
+    public func registryKey(_ account: Account){
+        account.registryPixKey(pixKeyEntry)
     }
 }
